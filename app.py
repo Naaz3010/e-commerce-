@@ -21,7 +21,7 @@ st.set_page_config(
 def load_data():
 
     orders = pd.read_csv(
-        "git_data/fact_orders_clean.csv"
+        "git_data/fact_orders_clean.csv.gz"
     )
 
     customers = pd.read_csv(
