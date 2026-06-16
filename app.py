@@ -213,7 +213,8 @@ with tab1:
 
     left.plotly_chart(
         fig_revenue,
-        use_container_width=True
+        use_container_width=True,
+        key="revenue_chart"
     )
 
     # PAYMENT TYPE
@@ -343,7 +344,8 @@ with tab1:
 
     left.plotly_chart(
         fig_revenue,
-        use_container_width=True
+        use_container_width=True,
+        key="revenue_chart"
     )
 
     # PAYMENT TYPE
