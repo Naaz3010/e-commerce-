@@ -330,7 +330,7 @@ with tab1:
 
     fig_revenue = px.line(
         monthly_revenue,
-        x="Date",
+        x="YearMonth",
         y="payment_value",
         markers=True,
         title="Monthly Revenue Trend"
