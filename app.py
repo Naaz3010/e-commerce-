@@ -388,7 +388,7 @@ with tab2:
 
     customer_count = (
         filtered_rfm[
-            "customer_id"
+            "customer_unique_id"
         ]
         .nunique()
     )
@@ -454,7 +454,7 @@ with tab2:
 
         result = filtered_rfm[
             filtered_rfm[
-                "customer_id"
+                "customer_unique_id"
             ]
             .astype(str)
             == search_customer
