@@ -388,7 +388,7 @@ with tab2:
 
     customer_count = (
         st.write(filtered_rfm.columns.tolist())
-
+    )
     avg_monetary = (
         filtered_rfm[
             "monetary"
