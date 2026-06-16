@@ -387,7 +387,10 @@ with tab2:
     # ==========================================
 
     customer_count = (
-        filtered_rfm["customer_unique_id"].nunique()
+        filtered_rfm[
+            "customer_unique_id"
+        ]
+        .nunique()
     )
     avg_monetary = (
         filtered_rfm[
