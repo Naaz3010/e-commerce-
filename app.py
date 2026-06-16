@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 # ==================================================
 
 st.set_page_config(
-    page_title="Olist Analytics Platform",
+    page_title="e-commerce Analytics Platform",
     page_icon="📊",
     layout="wide"
 )
@@ -144,7 +144,7 @@ state_revenue = (
 # ==================================================
 
 st.title(
-    "📊 Olist Business Analytics Platform"
+    "📊 E-commerce Business Analytics Platform"
 )
 
 st.caption(
