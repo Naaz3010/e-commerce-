@@ -558,7 +558,7 @@ with tab2:
     st.dataframe(
         top_customers[
             [
-                "customer_id",
+                "customer_unique_id",
                 "customer_segment",
                 "recency",
                 "frequency",
