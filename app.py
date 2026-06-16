@@ -125,7 +125,7 @@ state_revenue = (
     orders
     .merge(
         customers,
-        on="customer_unique_id",
+        on="customer_id",
         how="left"
     )
     .groupby(
