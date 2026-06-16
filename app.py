@@ -55,25 +55,27 @@ orders, customers, products, rfm, forecast = load_data()
 # =====================================================
 
 orders["Date"] = pd.to_datetime(
+    orders["Date"],
+    errors="coerce"
+)
+
+orders = orders.dropna(
+    subset=["Date"]
+)
+
+orders["YearMonth"] = (
     orders["Date"]
+    .dt.strftime("%Y-%m")
 )
-
-forecast["ds"] = pd.to_datetime(
-    forecast["ds"]
-)
-
-# Monthly Revenue
 
 monthly_revenue = (
     orders.groupby(
-        pd.Grouper(
-            key="Date",
-            freq="M"
-        )
+        "YearMonth"
     )["payment_value"]
     .sum()
     .reset_index()
 )
+
 
 # State Revenue
 
@@ -198,7 +200,7 @@ with tab1:
 
     fig_revenue = px.line(
         monthly_revenue,
-        x="Date",
+        x="YearMonth",
         y="payment_value",
         markers=True,
         title="Monthly Revenue Trend"
