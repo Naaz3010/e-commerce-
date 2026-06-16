@@ -11,8 +11,8 @@ st.title("Olist Business Analytics Dashboard")
 
 # Load data
 
-forecast = pd.read_csv("data/sales_forecast.csv")
-rfm = pd.read_csv("data/customer_rfm_segments.csv")
+forecast = pd.read_csv("git_data/sales_forecast.csv")
+rfm = pd.read_csv("git_data/customer_rfm_segments.csv")
 
 # Sidebar
 
